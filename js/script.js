@@ -74,33 +74,30 @@ catInfo(cats);
 
 
 // Question 8
+const container = document.querySelector(".cat-container");
+
 function createCats(cats) {
 
-    let listOfCats = "";
+    let html = "";
 
-    let petAge = "Age unknown";
+    for (let i = 0; i < cats.length; i++) {
+        
+        let catAge = "";
+        if (cats[i].age) {
+            catAge = cats[i].age;
+        } else {
+            catAge = "Age unknown";
+        }
 
-    const container = document.querySelector(".cat-container");
-
-    for ( let i = 0; i < cats.length; i++) {
-
-        listOfCats = `<div>
+        html = html + `<div>
                         <h5> ${cats[i].name} </h5>
-                        <p>  ${cats[i].age}  </p>
-                    </div>`
-        console.log(listOfCats);
-
-        if (cats[i].age === undefined)
-        console.log(cats[i].age, "Age uknown");
-
-        return cats;
-
-        container.innerHTML = listOfCats;
+                        <p>  ${catAge}  </p>
+                      </div>`
     }
-}
+    return html;
+};
 
+const catList = createCats(cats);
+console.log(catList);
 
-
-createCats(cats);
-
-
+container.innerHTML = catList;
