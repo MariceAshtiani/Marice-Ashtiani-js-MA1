@@ -21,6 +21,8 @@ Change its innerHTML value to "Updated heading".
 Question 3:
 
 Use the style property on the heading variable from the question above to change its font size to "2em".
+
+
 Question 4:
 
 Add a class to the heading variable called subheading.
@@ -32,6 +34,8 @@ Question 5:
 Write code that selects all the p elements on a page and assigns them to a variable called paragraphs.
 
 Loop through the p elements and change the colour of each to "red".
+
+
 Question 6:
 
 Select the div with a class of results, assign it to a variable called resultsContainer and set its inner HTML to be <p>New paragraph</p> and its background colour to be yellow.
